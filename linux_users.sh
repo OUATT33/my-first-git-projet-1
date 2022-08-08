@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script to add a user to Linux system
 if [ $(id -u) -eq 0 ]; then
-	read -p "Enter username : " username
+	read -p "Enter username waiting: " username
 	read -s -p "Enter new password : " password
 	egrep "^$username" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
