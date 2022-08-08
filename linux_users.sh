@@ -3,6 +3,7 @@
 if [ $(id -u) -eq 0 ]; then
 	read -p "Enter username please : " username
 	read -s -p "Enter New password : " password
+	read -g -p "Enter group name   : " groupname
 	egrep "^$username" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
 		echo "$username exists!"
